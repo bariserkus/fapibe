@@ -27,7 +27,7 @@ class TodoRequest(BaseModel):
     title: str = Field(min_length=3, max_length=30)
     description: str = Field(min_length=3, max_length=100)
     priority: int = Field(ge=1, le=5)
-    complete: bool = Field(default=False)
+    completed: bool = Field(default=False)
 
     model_config = {
         "json_schema_extra": {
@@ -35,7 +35,7 @@ class TodoRequest(BaseModel):
                 "title": "Task Title",
                 "description": "Description of the Task",
                 "priority": 1,
-                "complete": False,
+                "completed": False,
             }
         }
     }
@@ -95,7 +95,7 @@ async def update_todo(user: user_dependency,
     todo_model.title = todo_request.title
     todo_model.description = todo_request.description
     todo_model.priority = todo_request.priority
-    todo_model.complete = todo_request.complete
+    todo_model.completed = todo_request.completed
 
     db.add(todo_model)
     db.commit()
