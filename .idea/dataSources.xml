@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="todos" uuid="76ca54bb-614b-4153-ab07-06fd4afb87a0">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="TodoApplicationDatabase@localhost" uuid="a3f7a27e-9ec0-4d48-8736-64d68dd48d23">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\fapibe\TodoApp\todos.db</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/TodoApplicationDatabase</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
